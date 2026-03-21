@@ -34,6 +34,9 @@
   --color-surface: var(--surface);
   --color-surface-foreground: var(--surface-foreground);
 
+  --color-bwai-off-white: var(--bwai-off-white);
+  --color-bwai-black-02: var(--bwai-black-02);
+
   --color-bwai-blue: var(--bwai-blue-500);
   --color-bwai-green: var(--bwai-green-500);
   --color-bwai-yellow: var(--bwai-yellow-600);
@@ -56,15 +59,6 @@
   */
   --font-sans: var(--font-brand-sans);
   --font-mono: var(--font-brand-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0b0b0b;
-    --foreground: var(--bwai-off-white);
-    --surface: #111111;
-    --surface-foreground: var(--bwai-off-white);
-  }
 }
 
 body {

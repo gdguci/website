@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import { SiteFooter } from "./components/SiteFooter";
+import { SiteNavbar } from "./components/SiteNavbar";
 
 const brandSans = Roboto({
   variable: "--font-brand-sans",
@@ -15,8 +17,9 @@ const brandMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Googlde Developer Group -- UC Irvine",
-  description: "The Google Developer Group (GDG) at UC Irvine is a community of developers and tech enthusiasts passionate about Google technologies. We host events, workshops, and meetups to empower students and professionals to learn, connect, and grow their skills with the latest tools and trends in technology.",
+  title: "Google Developer Group on Campus @ UCI",
+  description:
+    "GDG on Campus at UC Irvine is a community for developers and tech enthusiasts. We host events, workshops, and meetups to learn, connect, and grow together.",
 };
 
 export default function RootLayout({
@@ -29,7 +32,11 @@ export default function RootLayout({
       <body
         className={`${brandSans.variable} ${brandMono.variable} antialiased`}
       >
-        {children}
+        <div className="min-h-dvh bg-background text-foreground">
+          <SiteNavbar />
+          <div className="min-h-[calc(100dvh-64px)]">{children}</div>
+          <SiteFooter />
+        </div>
       </body>
     </html>
   );
