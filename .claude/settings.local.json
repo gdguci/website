@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E '\\\\.\\(tsx|ts|css|js|jsx\\)$')",
+      "Bash(npm run *)",
+      "Bash(git rm *)",
+      "Bash(npx tsc *)",
+      "Bash(npx eslint *)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(curl -sf http://localhost:3000)",
+      "Bash(break)",
+      "Read(//private/tmp/**)",
+      "Bash(chromium-cli --help)",
+      "Bash(npx playwright *)",
+      "Bash(node -e \"require.resolve\\('playwright'\\)\")",
+      "Bash(node --experimental-vm-modules /private/tmp/claude-501/-Users-aacode-Desktop-Github-website/f1f4d542-7be6-42b6-93c6-e1720c606c6c/scratchpad/shot.mjs)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(node shot.mjs)",
+      "Bash(node shot-mobile.mjs)",
+      "Bash(pkill -f \"next dev\")"
+    ]
+  }
+}
