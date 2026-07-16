@@ -32,7 +32,14 @@ export default function RootLayout({
       <body
         className={`${brandSans.variable} ${brandMono.variable} antialiased`}
       >
-        <div className="min-h-dvh bg-background text-foreground">
+        <div
+          className="min-h-dvh bg-background text-foreground"
+          style={{
+            backgroundImage:
+              "radial-gradient(rgba(30,30,30,0.11) 1px, transparent 1px)",
+            backgroundSize: "28px 28px",
+          }}
+        >
           <SiteNavbar />
           <div className="min-h-[calc(100dvh-64px)]">{children}</div>
           <SiteFooter />

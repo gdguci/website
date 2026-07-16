@@ -59,6 +59,18 @@
   */
   --font-sans: var(--font-brand-sans);
   --font-mono: var(--font-brand-mono);
+
+  --animate-blob: blob-drift 10s ease-in-out infinite;
+}
+
+@keyframes blob-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(14px, -22px) scale(1.05); }
+  66% { transform: translate(-10px, 10px) scale(0.97); }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
