@@ -40,12 +40,12 @@ export function SiteNavbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href="#join"
+          <Link
+            href="/contact"
             className="rounded-full bg-bwai-blue px-4 py-2 text-sm font-medium text-white no-underline shadow-sm transition-all duration-150 hover:brightness-110 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-bwai-blue/40"
           >
             Join
-          </a>
+          </Link>
         </div>
       </div>
     </header>

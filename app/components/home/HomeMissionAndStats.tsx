@@ -1,24 +1,10 @@
+import { toneToAccent, toneToBg } from "../tone";
+
 const stats = [
-  { label: "Members", value: "500+", detail: "students & alumni", tone: "blue" },
-  { label: "Events / yr", value: "20+", detail: "workshops & talks", tone: "green" },
-  { label: "Years active", value: "4", detail: "since 2021", tone: "yellow" },
+  { label: "Focus", value: "Build", detail: "projects & workshops", tone: "blue" },
+  { label: "Community", value: "Open", detail: "all majors welcome", tone: "green" },
+  { label: "Founded", value: "2025", detail: "GDG on Campus @ UCI", tone: "yellow" },
 ] as const;
-
-function toneToBg(tone: (typeof stats)[number]["tone"]) {
-  switch (tone) {
-    case "blue":   return "bg-bwai-pastel-blue";
-    case "green":  return "bg-bwai-pastel-green";
-    case "yellow": return "bg-bwai-pastel-yellow";
-  }
-}
-
-function toneToAccent(tone: (typeof stats)[number]["tone"]) {
-  switch (tone) {
-    case "blue":   return "bg-bwai-blue";
-    case "green":  return "bg-bwai-green";
-    case "yellow": return "bg-bwai-yellow";
-  }
-}
 
 export function HomeMissionAndStats() {
   return (
@@ -27,8 +13,9 @@ export function HomeMissionAndStats() {
         Our Mission
       </p>
       <p className="mt-3 text-base leading-relaxed text-bwai-black-02/80">
-        GDG on Campus UCI empowers students to learn, connect, and grow through
-        hands-on workshops, industry talks, and a welcoming developer community.
+        GDGUCI empowers students to unleash their potential through projects,
+        hands-on workshops, and networking — welcoming anyone exploring
+        technology, innovation, and collaboration.
       </p>
 
       <div className="mt-6 grid gap-3 sm:grid-cols-3">

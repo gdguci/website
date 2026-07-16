@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { socials } from "./socials";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -10,10 +11,10 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { label: "Instagram", href: "#" },
-  { label: "LinkedIn", href: "#" },
-  { label: "Discord", href: "#" },
-  { label: "GitHub", href: "#" },
+  { label: "Instagram", href: socials.instagram.href },
+  { label: "LinkedIn", href: socials.linkedin.href },
+  { label: "Discord", href: socials.discord.href },
+  { label: "GitHub", href: socials.github.href },
 ];
 
 export function SiteFooter() {
@@ -26,21 +27,22 @@ export function SiteFooter() {
         />
 
         <div className="grid gap-8 sm:grid-cols-3">
-          {/* Brand */}
           <div>
-            <p className="text-sm font-bold tracking-tight">GDG on Campus @ UCI</p>
+            <p className="text-sm font-bold tracking-tight">
+              GDG on Campus @ UCI
+            </p>
             <p className="mt-2 max-w-xs text-sm leading-relaxed text-bwai-black-02/60">
-              A student-run developer community at UC Irvine. Learn, build, and connect with fellow makers.
+              A student-run developer community at UC Irvine. Learn, build, and
+              connect with fellow makers.
             </p>
             <a
               className="mt-3 inline-block text-sm text-bwai-black-02/55 underline decoration-black/20 underline-offset-4 transition hover:text-bwai-black-02 hover:decoration-black/50"
-              href="mailto:gdg.ucirvine@gmail.com"
+              href={socials.emailHref}
             >
-              gdg.ucirvine@gmail.com
+              {socials.email}
             </a>
           </div>
 
-          {/* Navigation */}
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-bwai-black-02/40">
               Navigate
@@ -59,7 +61,6 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          {/* Social */}
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-bwai-black-02/40">
               Connect
@@ -70,6 +71,12 @@ export function SiteFooter() {
                   <a
                     href={link.href}
                     className="text-sm text-bwai-black-02/60 no-underline transition-colors hover:text-bwai-black-02"
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={
+                      link.href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                   >
                     {link.label}
                   </a>
@@ -80,7 +87,10 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-8 flex flex-col gap-2 border-t border-black/8 pt-5 text-xs text-bwai-black-02/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} GDG on Campus @ UCI. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} GDG on Campus @ UCI. All rights
+            reserved.
+          </p>
           <p className="font-mono">Built with Next.js + Tailwind CSS</p>
         </div>
       </div>

@@ -1,39 +1,5 @@
-const eventCategories = [
-  {
-    title: "Technical Workshops",
-    description:
-      "Hands-on sessions on AI/ML, web development, cloud platforms, and developer tools.",
-    tone: "red",
-  },
-  {
-    title: "Professional Dev",
-    description:
-      "Resume reviews, mock interviews, and tech talks from industry professionals.",
-    tone: "blue",
-  },
-  {
-    title: "Socials & Community",
-    description:
-      "Game nights, study halls, and events to connect with fellow builders.",
-    tone: "green",
-  },
-] as const;
-
-function toneToBg(tone: (typeof eventCategories)[number]["tone"]) {
-  switch (tone) {
-    case "red":   return "bg-bwai-pastel-red";
-    case "blue":  return "bg-bwai-pastel-blue";
-    case "green": return "bg-bwai-pastel-green";
-  }
-}
-
-function toneToAccent(tone: (typeof eventCategories)[number]["tone"]) {
-  switch (tone) {
-    case "red":   return "bg-bwai-red";
-    case "blue":  return "bg-bwai-blue";
-    case "green": return "bg-bwai-green";
-  }
-}
+import { eventCategories } from "../eventCategories";
+import { toneToAccent, toneToBg } from "../tone";
 
 export function HomeEventsPreview() {
   return (
@@ -61,7 +27,7 @@ export function HomeEventsPreview() {
         </div>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {eventCategories.map((category) => (
+          {eventCategories.slice(0, 3).map((category) => (
             <div
               key={category.title}
               className={`relative overflow-hidden rounded-2xl ${toneToBg(category.tone)} p-5 ring-1 ring-black/5 transition-all duration-200 hover:-translate-y-1 hover:shadow-md`}
