@@ -63,7 +63,7 @@ export default function ContactPage() {
       </div>
 
       <p className="mt-6 text-sm text-foreground/55">
-        General meetings are held biweekly during the school year — check
+        General meetings are held weekly during the school year — check
         Instagram and Discord for the next date and location.
       </p>
     </main>
