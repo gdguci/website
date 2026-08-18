@@ -1,10 +1,6 @@
 export function HomeHero() {
   return (
     <div className="space-y-6">
-      <div className="inline-flex items-center gap-1.5 rounded-full border border-bwai-blue/20 bg-white/70 px-3 py-1 text-xs font-medium text-bwai-blue shadow-sm backdrop-blur-sm">
-        <span className="h-1.5 w-1.5 rounded-full bg-bwai-blue" aria-hidden="true" />
-        Google Developer Group on Campus @ UCI
-      </div>
 
       <h1 className="text-balance text-4xl font-bold leading-[1.1] tracking-tight sm:text-6xl">
         Empowering the next generation of tech leaders at{" "}
