@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
@@ -14,13 +15,14 @@ export function SiteNavbar() {
     <header className="sticky top-0 z-50 border-b border-black/8 bg-white/80 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-6 px-4 py-3.5 sm:px-6">
         <Link href="/" className="flex items-center gap-2.5 no-underline">
-          {/* Google 2×2 colour dots */}
-          <div className="grid grid-cols-2 gap-[3px]" aria-hidden="true">
-            <div className="h-2.5 w-2.5 rounded-[3px] bg-bwai-blue" />
-            <div className="h-2.5 w-2.5 rounded-[3px] bg-bwai-red" />
-            <div className="h-2.5 w-2.5 rounded-[3px] bg-bwai-yellow" />
-            <div className="h-2.5 w-2.5 rounded-[3px] bg-bwai-green" />
-          </div>
+          <Image
+            src="/gdgLogo.png"
+            alt="GDG on Campus @ UCI logo"
+            width={24}
+            height={24}
+            className="h-6 w-6 shrink-0"
+            priority
+          />
           <div className="flex items-baseline gap-1.5">
             <span className="text-sm font-bold tracking-tight">GDG on Campus</span>
             <span className="hidden text-xs text-foreground/45 sm:inline">@ UCI</span>
