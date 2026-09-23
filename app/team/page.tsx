@@ -20,7 +20,6 @@ const leads = [
   { name: "Ella Zhong", role: "Head of Graphics", tone: "yellow" as Tone },
   { name: "Daniel Heng Lu", role: "Head of Media", tone: "blue" as Tone },
   { name: "Kevin Chen", role: "Head of Events", tone: "green" as Tone },
-  { name: "Allison Kim", role: "Head of Outreach", tone: "yellow" as Tone },
 ] as const;
 
 function initials(name: string) {
