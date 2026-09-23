@@ -29,13 +29,6 @@ export const eventCategories = [
       "Tech talks from industry professionals across Google and beyond.",
     tone: "yellow" as Tone,
   },
-  {
-    slug: "hackathons",
-    title: "Hackathons",
-    description:
-      "Collaborative building sprints where ideas turn into working demos.",
-    tone: "red" as Tone,
-  },
 ] as const;
 
 export type EventCategorySlug = (typeof eventCategories)[number]["slug"];

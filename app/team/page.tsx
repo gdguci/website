@@ -16,11 +16,11 @@ const executiveBoard = [
 ] as const;
 
 const leads = [
-  { name: "Steve Yang", role: "Technical Lead", tone: "red" as Tone },
-  { name: "Ella Zhong", role: "Design Lead", tone: "yellow" as Tone },
-  { name: "Daniel Heng Lu", role: "Media Lead", tone: "blue" as Tone },
-  { name: "Kevin Chen", role: "Events Lead", tone: "green" as Tone },
-  { name: "Allison Kim", role: "Outreach", tone: "yellow" as Tone },
+  { name: "Steve Yang", role: "Head of Projects", tone: "red" as Tone },
+  { name: "Ella Zhong", role: "Head of Graphics", tone: "yellow" as Tone },
+  { name: "Daniel Heng Lu", role: "Head of Media", tone: "blue" as Tone },
+  { name: "Kevin Chen", role: "Head of Events", tone: "green" as Tone },
+  { name: "Allison Kim", role: "Head of Outreach", tone: "yellow" as Tone },
 ] as const;
 
 function initials(name: string) {
@@ -60,7 +60,7 @@ export default function TeamPage() {
     <main className="mx-auto w-full max-w-5xl px-4 py-14 sm:px-6">
       <PageHeader
         title="Team"
-        description="The students who plan, organize, and run GDG on Campus @ UCI — from workshops to socials."
+        description="The students who plan, organize, and run GDG on Campus @ UCI"
       />
 
       <section className="mt-10">
@@ -76,7 +76,7 @@ export default function TeamPage() {
 
       <section className="mt-12">
         <p className="text-xs font-semibold uppercase tracking-wider text-foreground/45">
-          Leads & Committees
+          Team Heads
         </p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {leads.map((member) => (

@@ -6,7 +6,7 @@ const values = [
   {
     title: "Learn together",
     description:
-      "Peer-to-peer workshops where students teach students — no prior experience required.",
+      "Peer-to-peer workshops where students teach students. No prior experience required!",
     tone: "blue" as Tone,
   },
   {
