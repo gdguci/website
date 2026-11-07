@@ -32,7 +32,7 @@ export default function Home() {
         </section>
 
         <section className="border-t px-6 py-20">
-          <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-2 md:items-start">
+          <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-2 lg:items-start">
             <div>
               <h2 className="text-4xl font-semibold tracking-tight">
                 Overview

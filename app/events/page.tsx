@@ -49,7 +49,7 @@ export default function EventsPage() {
       <main className="flex-1 px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <h1 className="text-4xl font-semibold tracking-tight">Events</h1>
-          <div className="mt-16 grid gap-12 md:grid-cols-3 md:items-start">
+          <div className="mt-16 grid gap-12 lg:grid-cols-3 lg:items-start">
             <section aria-labelledby="calendar-heading">
               <h2
                 id="calendar-heading"
@@ -129,8 +129,8 @@ export default function EventsPage() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="-left-8" />
-                <CarouselNext className="-right-8" />
+                <CarouselPrevious className="-left-4" />
+                <CarouselNext className="-right-4" />
               </Carousel>
             </section>
           </div>
