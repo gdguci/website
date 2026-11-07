@@ -1,7 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import gdgLogo from "@/app/gdgLogo.png"
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -25,8 +24,8 @@ export function Navbar() {
           className="flex items-center"
         >
           <Image
-            src={gdgLogo}
-            alt="GDG UCI"
+            src="/gdgLogo.png"
+            alt="GDGUCI"
             width={40}
             height={33}
             priority
