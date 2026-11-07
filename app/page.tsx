@@ -61,7 +61,7 @@ export default function Home() {
                     Mentorship
                   </h3>
                   <ul className="mt-4 list-disc space-y-2 pl-6 text-muted-foreground">
-                    <li>Guidance from peers, faculty, and industry professionals</li>
+                    <li>Guidance from industry professionals</li>
                     <li>Support for personal and technical growth</li>
                     <li>A welcoming space to ask questions and share knowledge</li>
                   </ul>
